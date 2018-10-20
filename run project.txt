@@ -1,0 +1,22 @@
+INDEXING:
+
+ubuntu@ip-172-31-31-150:~/LuceneSearchEngine$ mvn exec:java -Dexec.mainClass=ie.tcd.studentprojects.MyLuceneIndexer
+
+
+SEARCHING:
+
+ubuntu@ip-172-31-31-150:~/LuceneSearchEngine$ mvn exec:java -Dexec.mainClass=ie.tcd.studentprojects.MySearch
+
+
+TREC_EVAL:
+
+ubuntu@ip-172-31-31-150:~/LuceneSearchEngine/trec_eval$ ./trec_eval ../dataDirectory/QRelsCorrectedforTRECeval ../results/Classic/results.txt
+
+ubuntu@ip-172-31-31-150:~/LuceneSearchEngine/trec_eval$ ./trec_eval ../dataDirectory/QRelsCorrectedforTRECeval ../results/LMD/results.txt
+
+ubuntu@ip-172-31-31-150:~/LuceneSearchEngine/trec_eval$ ./trec_eval ../dataDirectory/QRelsCorrectedforTRECeval ../results/BM25/results.txt
+
+
+
+
+
