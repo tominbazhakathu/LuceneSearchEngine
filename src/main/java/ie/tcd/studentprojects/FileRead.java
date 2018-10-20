@@ -228,20 +228,6 @@ public class FileRead {
         return cranQueryList;
     }
 
-    private int getCranSize(Map<String, List<List<String>>> cranRelDict) {
-
-        int max = -1;
-        Iterator<Entry<String, List<List<String>>>> iteration = cranRelDict.entrySet().iterator();
-        while (iteration.hasNext()) {
-
-            Entry<String, List<List<String>>> pair = (Entry<String, List<List<String>>>) iteration.next();
-            List<List<String>> value = pair.getValue();
-            int num = value.get(0).size() + value.get(1).size();
-            if (num > max) max = num;
-        }
-        return max;
-    }
-
     public void deleteDir(File file) {
 
         File[] contents = file.listFiles();
